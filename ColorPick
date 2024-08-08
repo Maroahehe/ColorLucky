@@ -1,0 +1,30 @@
+import random
+import turtle
+
+# Lista de cores
+cores = ['red', 'blue', 'green', 'yellow', 'white', 'white', 'orange', 'purple', 'pink']
+
+# Sorteio de uma cor aleatória
+cor_sorteada = random.choice(cores)
+
+# Configurando a tela
+tela = turtle.Screen()
+tela.bgcolor("black")  # Cor de fundo da tela
+
+# Configurando a tartaruga
+tartaruga = turtle.Turtle()
+tartaruga.shape("turtle")
+tartaruga.color(cor_sorteada)
+
+#Desenhar estrela com a cor sorteada
+tartaruga.begin_fill()
+for _ in range(5):
+    tartaruga.forward(200)
+    tartaruga.right(144)  # Ângulo para desenhar uma estrela de 5 pontas
+
+
+# Exibindo o resultado
+tela.title(f'A cor sorteada é: {cor_sorteada}')
+
+# Manter a janela aberta
+turtle.done()
